@@ -7,7 +7,7 @@ import numpy as np
 import os
 import sys
 import pandas as pd
-# import matplotlib.pyplot as plt
+import pprint
 import keras
 from keras.models import Sequential
 from keras.layers import Conv2D
@@ -52,6 +52,10 @@ image_width = 300
 image_height = 500
 
 
+def get_clothes_category(clothes_name,file_name = "list_category_cloth.csv"):
+    file = path_file(file_name)
+    reader = pd.read_csv(file)
+    return reader[reader[clothes_name] == clothes_name]
 
 def path_file(file):
     return str(file)
@@ -60,43 +64,41 @@ def nn(input_dir,output_dir):
 
     all_dir = []
     all_file = []
+    clothes_name = []
+
     for _dir in os.listdir(input_dir):
-        cwd = os.getcwd() + "/" + input_dir
-        path = cwd  + "/" + _dir
-        for file in os.listdir(path):
-            all_file.append(path + "/" + file)
-        all_dir.append(cwd  + "/" + _dir)
-        # print(*all_file , sep="\n")
-        # print(*all_dir , sep="\n")
-    
-    for img_file in all_file[0 : 40]:
-        predict = predictor(img_file)
-        file = path_file("list_bbox.csv")
-        reader = pd.read_csv(file)
+        all_dir.append(_dir)
+        clothes_name.append(_dir.split('_')[-1])
+    clothes_categories = dict(zip(clothes_name,all_dir))
+    # print(list(clothes_categories.values()))
+    # pprint.pprint(clothes_categories)
+    # print(len(all_file) , sep="\n") 
+    # print(*all_dir , sep="\n")
 
-        img = cv2.imread(img_file)
-        #img = cv2.resize(img,(image_width,image_height))
-        #seg = image(image,reader.x1[predict],reader.y1[predict],reader.x2[predict],reader.y2[predict],reader.i[predict])
+    for _dir in list(clothes_categories.values()):
+        input_subdir = os.getcwd() + "/" + input_dir + "/" + _dir
+        output_file_dir = os.getcwd() + "/" + output_dir + "/" + _dir
         
-
-        mask = np.zeros(img.shape[:2],np.uint8)   
-        bgdModel = np.zeros((1,65),np.float64)
-        fgdModel = np.zeros((1,65),np.float64)
-        
-        output_file = img_file.split('/')
-        cur_img_input_path = 'img/' + output_file[6] + '/' +output_file[7]
-        sub_folder_path = output_dir +'/' + output_file[6]
-        if reader.image_name[predict]:
-            rect = (reader.x1[predict],reader.y1[predict],reader.x2[predict],reader.y2[predict])
-            cv2.grabCut(img,mask,rect,bgdModel,fgdModel,10,cv2.GC_INIT_WITH_RECT)
-            mask2 = np.where((mask==2)|(mask==0),0,1).astype('uint8')
+        for img_file in os.listdir(input_subdir):
+            img_file = input_subdir + "/" +img_file
+            predict = predictor(img_file)
+            reader = pd.read_csv(path_file("list_bbox.csv"))
+            img = cv2.imread(img_file)
+            mask = np.zeros(img.shape[:2],np.uint8)   
+            bgdModel = np.zeros((1,65),np.float64)
+            fgdModel = np.zeros((1,65),np.float64)
             
-            img_cut = img*mask2[:,:,np.newaxis]
-            if not os.path.exists(sub_folder_path):
-                os.makedirs(sub_folder_path)
-            image_output_path = os.getcwd()+'/' +sub_folder_path
-            # print(image_output_path)
-            cv2.imwrite(os.path.join(image_output_path,output_file[7]),img_cut)
-            print(image_output_path + '/' +output_file[7])
+            output_file = img_file.split('/')
+            sub_folder_path = output_dir + '/' + _dir
+            if reader.image_name[predict]:
+                rect = (reader.x1[predict],reader.y1[predict],reader.x2[predict],reader.y2[predict])
+                cv2.grabCut(img,mask,rect,bgdModel,fgdModel,10,cv2.GC_INIT_WITH_RECT)
+                mask2 = np.where((mask==2)|(mask==0),0,1).astype('uint8')
+                
+                img_cut = img*mask2[:,:,np.newaxis]
+                if not os.path.exists(sub_folder_path):
+                    os.makedirs(sub_folder_path)
+                cv2.imwrite(os.path.join(output_file_dir,img_file),img_cut)
+                # print(output_file_dir + '/' +img_file)
 
 nn(input_dir,output_dir)
