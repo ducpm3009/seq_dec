@@ -1,0 +1,4 @@
+#ignore img dir
+img/
+#ignore results dir
+results/

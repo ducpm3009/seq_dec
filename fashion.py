@@ -1,13 +1,10 @@
-#josh.anish1@gmail.com
-#the code has been created with an intention of previewing the entire project
-#contributions are welcomed!!!
-
 import cv2
 import numpy as np
 import os
 import sys
 import pandas as pd
 import pprint
+import time
 import keras
 from keras.models import Sequential
 from keras.layers import Conv2D
@@ -45,9 +42,6 @@ def predictor(img_file):
     predict = np.squeeze(prediction,axis=0)
     return int(predict)
 
-"""Neural Network Decoding"""
-""" The coordinates are created and trained"""
-"""-----------------"""
 image_width = 300
 image_height = 500
 
@@ -90,8 +84,12 @@ def nn(input_dir,output_dir):
             
             output_file = img_file.split('/')
             sub_folder_path = output_dir + '/' + _dir
+            # print(img_file)
             if reader.image_name[predict]:
+                
                 rect = (reader.x1[predict],reader.y1[predict],reader.x2[predict],reader.y2[predict])
+                # print("aksoglfgjiohj")
+                # print(rect)
                 cv2.grabCut(img,mask,rect,bgdModel,fgdModel,10,cv2.GC_INIT_WITH_RECT)
                 mask2 = np.where((mask==2)|(mask==0),0,1).astype('uint8')
                 
