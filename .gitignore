@@ -2,3 +2,5 @@
 img/
 #ignore results dir
 results/
+#ignore .xml
+*xml
