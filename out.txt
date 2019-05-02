@@ -1,0 +1,62 @@
+WARNING:tensorflow:From /usr/local/lib/python3.6/dist-packages/tensorflow/python/ops/math_ops.py:3066: to_int32 (from tensorflow.python.ops.math_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use tf.cast instead.
+/usr/local/lib/python3.6/dist-packages/keras/engine/training_generator.py:47: UserWarning: Using a generator with `use_multiprocessing=True` and multiple workers may duplicate your data. Please consider using the`keras.utils.Sequence class.
+  UserWarning('Using a generator with `use_multiprocessing=True`'
+Epoch 1/200
+ - 871s - loss: 4.1324 - img_loss: 2.2356 - bbox_loss: 0.0629 - img_acc: 0.3794 - img_top_k_categorical_accuracy: 0.7231 - bbox_mean_squared_error: 0.0629 - val_loss: 4.2774 - val_img_loss: 2.3593 - val_bbox_loss: 0.0948 - val_img_acc: 0.3795 - val_img_top_k_categorical_accuracy: 0.7253 - val_bbox_mean_squared_error: 0.0948
+Epoch 2/200
+ - 846s - loss: 3.7089 - img_loss: 1.8520 - bbox_loss: 0.0441 - img_acc: 0.4767 - img_top_k_categorical_accuracy: 0.8108 - bbox_mean_squared_error: 0.0441 - val_loss: 4.3138 - val_img_loss: 2.4312 - val_bbox_loss: 0.0804 - val_img_acc: 0.3623 - val_img_top_k_categorical_accuracy: 0.7322 - val_bbox_mean_squared_error: 0.0804
+Epoch 3/200
+ - 842s - loss: 3.5617 - img_loss: 1.7281 - bbox_loss: 0.0418 - img_acc: 0.5078 - img_top_k_categorical_accuracy: 0.8335 - bbox_mean_squared_error: 0.0418 - val_loss: 4.0492 - val_img_loss: 2.1959 - val_bbox_loss: 0.0719 - val_img_acc: 0.3919 - val_img_top_k_categorical_accuracy: 0.7666 - val_bbox_mean_squared_error: 0.0719
+Epoch 4/200
+ - 846s - loss: 3.4578 - img_loss: 1.6482 - bbox_loss: 0.0385 - img_acc: 0.5251 - img_top_k_categorical_accuracy: 0.8474 - bbox_mean_squared_error: 0.0385 - val_loss: 3.8913 - val_img_loss: 2.0668 - val_bbox_loss: 0.0637 - val_img_acc: 0.4512 - val_img_top_k_categorical_accuracy: 0.7805 - val_bbox_mean_squared_error: 0.0637
+Epoch 5/200
+ - 835s - loss: 3.4210 - img_loss: 1.6337 - bbox_loss: 0.0369 - img_acc: 0.5343 - img_top_k_categorical_accuracy: 0.8511 - bbox_mean_squared_error: 0.0369 - val_loss: 3.9502 - val_img_loss: 2.1463 - val_bbox_loss: 0.0638 - val_img_acc: 0.4548 - val_img_top_k_categorical_accuracy: 0.7591 - val_bbox_mean_squared_error: 0.0638
+Epoch 6/200
+ - 839s - loss: 3.3965 - img_loss: 1.6292 - bbox_loss: 0.0375 - img_acc: 0.5316 - img_top_k_categorical_accuracy: 0.8528 - bbox_mean_squared_error: 0.0375 - val_loss: 3.8783 - val_img_loss: 2.0961 - val_bbox_loss: 0.0626 - val_img_acc: 0.4127 - val_img_top_k_categorical_accuracy: 0.7994 - val_bbox_mean_squared_error: 0.0626
+Epoch 7/200
+ - 837s - loss: 3.2968 - img_loss: 1.5523 - bbox_loss: 0.0348 - img_acc: 0.5535 - img_top_k_categorical_accuracy: 0.8607 - bbox_mean_squared_error: 0.0348 - val_loss: 3.9192 - val_img_loss: 2.1629 - val_bbox_loss: 0.0566 - val_img_acc: 0.4252 - val_img_top_k_categorical_accuracy: 0.7861 - val_bbox_mean_squared_error: 0.0566
+Epoch 8/200
+ - 839s - loss: 3.2775 - img_loss: 1.5534 - bbox_loss: 0.0344 - img_acc: 0.5518 - img_top_k_categorical_accuracy: 0.8625 - bbox_mean_squared_error: 0.0344 - val_loss: 3.8239 - val_img_loss: 2.0873 - val_bbox_loss: 0.0568 - val_img_acc: 0.4586 - val_img_top_k_categorical_accuracy: 0.8023 - val_bbox_mean_squared_error: 0.0568
+Epoch 9/200
+ - 841s - loss: 3.2820 - img_loss: 1.5791 - bbox_loss: 0.0330 - img_acc: 0.5503 - img_top_k_categorical_accuracy: 0.8570 - bbox_mean_squared_error: 0.0330 - val_loss: 3.8845 - val_img_loss: 2.1705 - val_bbox_loss: 0.0540 - val_img_acc: 0.4230 - val_img_top_k_categorical_accuracy: 0.7861 - val_bbox_mean_squared_error: 0.0540
+Epoch 10/200
+ - 842s - loss: 3.2380 - img_loss: 1.5555 - bbox_loss: 0.0321 - img_acc: 0.5448 - img_top_k_categorical_accuracy: 0.8661 - bbox_mean_squared_error: 0.0321 - val_loss: 3.9156 - val_img_loss: 2.2232 - val_bbox_loss: 0.0517 - val_img_acc: 0.4272 - val_img_top_k_categorical_accuracy: 0.7581 - val_bbox_mean_squared_error: 0.0517
+Epoch 11/200
+ - 843s - loss: 3.2468 - img_loss: 1.5812 - bbox_loss: 0.0346 - img_acc: 0.5367 - img_top_k_categorical_accuracy: 0.8603 - bbox_mean_squared_error: 0.0346 - val_loss: 3.5123 - val_img_loss: 1.8405 - val_bbox_loss: 0.0504 - val_img_acc: 0.4830 - val_img_top_k_categorical_accuracy: 0.8342 - val_bbox_mean_squared_error: 0.0504
+Epoch 12/200
+ - 843s - loss: 3.1464 - img_loss: 1.5018 - bbox_loss: 0.0326 - img_acc: 0.5594 - img_top_k_categorical_accuracy: 0.8729 - bbox_mean_squared_error: 0.0326 - val_loss: 3.7330 - val_img_loss: 2.0846 - val_bbox_loss: 0.0458 - val_img_acc: 0.4327 - val_img_top_k_categorical_accuracy: 0.7952 - val_bbox_mean_squared_error: 0.0458
+Epoch 13/200
+ - 842s - loss: 3.1718 - img_loss: 1.5473 - bbox_loss: 0.0314 - img_acc: 0.5497 - img_top_k_categorical_accuracy: 0.8694 - bbox_mean_squared_error: 0.0314 - val_loss: 3.6056 - val_img_loss: 1.9722 - val_bbox_loss: 0.0496 - val_img_acc: 0.4458 - val_img_top_k_categorical_accuracy: 0.8095 - val_bbox_mean_squared_error: 0.0496
+Epoch 14/200
+ - 847s - loss: 3.0989 - img_loss: 1.4938 - bbox_loss: 0.0306 - img_acc: 0.5617 - img_top_k_categorical_accuracy: 0.8705 - bbox_mean_squared_error: 0.0306 - val_loss: 3.4518 - val_img_loss: 1.8378 - val_bbox_loss: 0.0488 - val_img_acc: 0.5022 - val_img_top_k_categorical_accuracy: 0.8408 - val_bbox_mean_squared_error: 0.0488
+Epoch 15/200
+ - 841s - loss: 3.0678 - img_loss: 1.4811 - bbox_loss: 0.0307 - img_acc: 0.5664 - img_top_k_categorical_accuracy: 0.8774 - bbox_mean_squared_error: 0.0307 - val_loss: 3.4790 - val_img_loss: 1.8843 - val_bbox_loss: 0.0477 - val_img_acc: 0.4619 - val_img_top_k_categorical_accuracy: 0.8148 - val_bbox_mean_squared_error: 0.0477
+Epoch 16/200
+ - 841s - loss: 3.0703 - img_loss: 1.5012 - bbox_loss: 0.0313 - img_acc: 0.5581 - img_top_k_categorical_accuracy: 0.8724 - bbox_mean_squared_error: 0.0313 - val_loss: 3.4264 - val_img_loss: 1.8567 - val_bbox_loss: 0.0409 - val_img_acc: 0.4659 - val_img_top_k_categorical_accuracy: 0.8255 - val_bbox_mean_squared_error: 0.0409
+Epoch 17/200
+ - 840s - loss: 3.0241 - img_loss: 1.4737 - bbox_loss: 0.0306 - img_acc: 0.5665 - img_top_k_categorical_accuracy: 0.8795 - bbox_mean_squared_error: 0.0306 - val_loss: 3.5599 - val_img_loss: 2.0019 - val_bbox_loss: 0.0471 - val_img_acc: 0.4522 - val_img_top_k_categorical_accuracy: 0.7778 - val_bbox_mean_squared_error: 0.0471
+Epoch 18/200
+ - 840s - loss: 3.0001 - img_loss: 1.4686 - bbox_loss: 0.0294 - img_acc: 0.5692 - img_top_k_categorical_accuracy: 0.8796 - bbox_mean_squared_error: 0.0294 - val_loss: 3.5010 - val_img_loss: 1.9577 - val_bbox_loss: 0.0501 - val_img_acc: 0.4653 - val_img_top_k_categorical_accuracy: 0.8050 - val_bbox_mean_squared_error: 0.0501
+Epoch 19/200
+ - 841s - loss: 2.9761 - img_loss: 1.4611 - bbox_loss: 0.0306 - img_acc: 0.5713 - img_top_k_categorical_accuracy: 0.8766 - bbox_mean_squared_error: 0.0306 - val_loss: 3.4149 - val_img_loss: 1.8924 - val_bbox_loss: 0.0466 - val_img_acc: 0.5006 - val_img_top_k_categorical_accuracy: 0.8325 - val_bbox_mean_squared_error: 0.0466
+Epoch 20/200
+ - 837s - loss: 2.9149 - img_loss: 1.4196 - bbox_loss: 0.0282 - img_acc: 0.5831 - img_top_k_categorical_accuracy: 0.8866 - bbox_mean_squared_error: 0.0282 - val_loss: 3.3016 - val_img_loss: 1.8027 - val_bbox_loss: 0.0403 - val_img_acc: 0.4764 - val_img_top_k_categorical_accuracy: 0.8359 - val_bbox_mean_squared_error: 0.0403
+Epoch 21/200
+ - 837s - loss: 2.9324 - img_loss: 1.4530 - bbox_loss: 0.0294 - img_acc: 0.5670 - img_top_k_categorical_accuracy: 0.8813 - bbox_mean_squared_error: 0.0294 - val_loss: 3.3148 - val_img_loss: 1.8281 - val_bbox_loss: 0.0454 - val_img_acc: 0.4678 - val_img_top_k_categorical_accuracy: 0.8377 - val_bbox_mean_squared_error: 0.0454
+Epoch 22/200
+ - 841s - loss: 2.9666 - img_loss: 1.5032 - bbox_loss: 0.0305 - img_acc: 0.5626 - img_top_k_categorical_accuracy: 0.8732 - bbox_mean_squared_error: 0.0305 - val_loss: 3.4344 - val_img_loss: 1.9650 - val_bbox_loss: 0.0450 - val_img_acc: 0.4355 - val_img_top_k_categorical_accuracy: 0.7870 - val_bbox_mean_squared_error: 0.0450
+Epoch 23/200
+ - 847s - loss: 2.9214 - img_loss: 1.4766 - bbox_loss: 0.0288 - img_acc: 0.5663 - img_top_k_categorical_accuracy: 0.8777 - bbox_mean_squared_error: 0.0288 - val_loss: 3.3974 - val_img_loss: 1.9437 - val_bbox_loss: 0.0458 - val_img_acc: 0.4884 - val_img_top_k_categorical_accuracy: 0.8345 - val_bbox_mean_squared_error: 0.0458
+Epoch 24/200
+ - 846s - loss: 2.9215 - img_loss: 1.4929 - bbox_loss: 0.0290 - img_acc: 0.5627 - img_top_k_categorical_accuracy: 0.8718 - bbox_mean_squared_error: 0.0290 - val_loss: 3.3540 - val_img_loss: 1.9137 - val_bbox_loss: 0.0490 - val_img_acc: 0.4620 - val_img_top_k_categorical_accuracy: 0.8075 - val_bbox_mean_squared_error: 0.0490
+Epoch 25/200
+ - 845s - loss: 2.8369 - img_loss: 1.4246 - bbox_loss: 0.0290 - img_acc: 0.5788 - img_top_k_categorical_accuracy: 0.8859 - bbox_mean_squared_error: 0.0290 - val_loss: 3.2418 - val_img_loss: 1.8223 - val_bbox_loss: 0.0444 - val_img_acc: 0.4702 - val_img_top_k_categorical_accuracy: 0.8230 - val_bbox_mean_squared_error: 0.0444
+Epoch 26/200
+ - 843s - loss: 2.8277 - img_loss: 1.4321 - bbox_loss: 0.0285 - img_acc: 0.5799 - img_top_k_categorical_accuracy: 0.8844 - bbox_mean_squared_error: 0.0285 - val_loss: 3.0962 - val_img_loss: 1.6942 - val_bbox_loss: 0.0429 - val_img_acc: 0.4967 - val_img_top_k_categorical_accuracy: 0.8420 - val_bbox_mean_squared_error: 0.0429
+Epoch 27/200
+ - 837s - loss: 2.7604 - img_loss: 1.3804 - bbox_loss: 0.0289 - img_acc: 0.5927 - img_top_k_categorical_accuracy: 0.8914 - bbox_mean_squared_error: 0.0289 - val_loss: 3.1028 - val_img_loss: 1.7225 - val_bbox_loss: 0.0371 - val_img_acc: 0.4888 - val_img_top_k_categorical_accuracy: 0.8355 - val_bbox_mean_squared_error: 0.0371
+Epoch 28/200
+ - 841s - loss: 2.7411 - img_loss: 1.3777 - bbox_loss: 0.0279 - img_acc: 0.5905 - img_top_k_categorical_accuracy: 0.8883 - bbox_mean_squared_error: 0.0279 - val_loss: 3.0559 - val_img_loss: 1.6899 - val_bbox_loss: 0.0384 - val_img_acc: 0.4998 - val_img_top_k_categorical_accuracy: 0.8525 - val_bbox_mean_squared_error: 0.0384
+Epoch 29/200
